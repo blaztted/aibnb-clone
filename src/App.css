@@ -6,6 +6,8 @@ body {
   margin: 0;
 }
 
+/* NAV */
+
 nav {
   height: 100px;
   display: flex;
@@ -15,4 +17,47 @@ nav {
 
 .nav--logo {
   max-width: 100px;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 80vh;
+  margin-top: 5vh;
+}
+
+.infinite-photo-grid {
+  width: 100%;
+  height: 70%;
+  max-height: 700px;
+  background-image: url("./assets/img/photo-grid.jpg");
+  background-size: cover;
+  /* background-size: calc(4.84 * min(100vh, 750px)) min(100vh, 750px); */
+  background-repeat: repeat-x;
+  animation: scroll 50s linear infinite;
+  will-change: background-position;
+}
+
+.hero h1 {
+  margin: 5vh 2vw 1vh 2vw;
+}
+
+.hero p {
+  margin: 0vh 2vw 2vh 2vw;
+}
+
+@keyframes scroll {
+  from {
+    background-position: left calc(4.84 * min(100vh, 750px)) top 0px;
+  }
+  to {
+    background-position: left 0px top 0px;
+  }
 }
