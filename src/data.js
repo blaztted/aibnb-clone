@@ -56,7 +56,7 @@ export default [
     openSpots: 7,
   },
   {
-    id: 3,
+    id: 5,
     title: "Battersea Chess Club",
     description:
       "Join us for regular meetups where you can sharpen your strategic skills, learn new tactics, and engage in friendly competition with fellow chess enthusiasts. ",

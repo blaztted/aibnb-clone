@@ -8,12 +8,14 @@ import "./App.css";
 const mapCards = data.map((str) => {
   return (
     <Card
+      key={str.id}
       img={str.coverImg}
       rating={str.stats.rating}
-      reviewCount={str.reviewCount}
+      reviewCount={str.stats.reviewCount}
       location={str.location}
       title={str.title}
       price={str.price}
+      openSpots={str.openSpots}
     />
   );
 });

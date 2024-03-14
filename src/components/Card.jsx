@@ -5,6 +5,7 @@ import fav from "../assets/img/favorite.png";
 export default function Card(props) {
   return (
     <div className="card">
+      {props.openSpots === 0 && <div className="card--badge">SOLD OUT</div>}
       <img
         src={`/assets/img/${props.img}`}
         className="card--image"
@@ -12,8 +13,8 @@ export default function Card(props) {
       />
       <div className="card--stats">
         <img src={fav} className="card--star" alt="Fav Icon" />
-        <span className="gray">{props.rating}</span>
-        <span className="gray">{props.reviewCount}• </span>
+        <span>{props.rating}</span>
+        <span className="gray">({props.reviewCount}) • </span>
         <span className="gray">{props.location}</span>
         <span>{props.country}</span>
       </div>
