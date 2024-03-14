@@ -6,19 +6,23 @@ import data from "./data";
 import "./App.css";
 
 const mapCards = data.map((str) => {
-  return (
-    <Card
-      key={str.id}
-      img={str.coverImg}
-      rating={str.stats.rating}
-      reviewCount={str.stats.reviewCount}
-      location={str.location}
-      title={str.title}
-      price={str.price}
-      openSpots={str.openSpots}
-    />
-  );
+  return <Card key={str.id} str={str} />;
 });
+
+// const mapCards = data.map((str) => {
+//   return (
+//     <Card
+//       key={str.id}
+//       img={str.coverImg}
+//       rating={str.stats.rating}
+//       reviewCount={str.stats.reviewCount}
+//       location={str.location}
+//       title={str.title}
+//       price={str.price}
+//       openSpots={str.openSpots}
+//     />
+//   );
+// });
 
 export default function App() {
   return (
