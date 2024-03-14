@@ -10,7 +10,7 @@ export default [
       rating: 4.8,
       reviewCount: 6,
     },
-    location: "Online",
+    location: "London",
     openSpots: 0,
   },
   {
@@ -24,7 +24,7 @@ export default [
       rating: 5.0,
       reviewCount: 30,
     },
-    location: "London",
+    location: "Online",
     openSpots: 27,
   },
   {
