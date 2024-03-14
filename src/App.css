@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+.root-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
 }
@@ -21,8 +26,12 @@ nav {
   width: 100%;
 }
 
+section {
+  padding: 20px;
+}
+
 h2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: normal;
 }
 
@@ -84,6 +93,12 @@ h2 {
 
 /*CARD*/
 
+.cards-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .card {
   width: 250px;
   font-size: 0.8rem;
@@ -92,6 +107,7 @@ h2 {
 
 .card--image {
   width: 100%;
+  height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 10%;
@@ -101,8 +117,27 @@ h2 {
 .card--stats {
   display: flex;
   align-items: center;
+  margin-left: 0.2rem;
+}
+
+.card--stats span {
+  margin-left: 0.4rem;
+}
+
+.card h2,
+.card p {
+  margin-left: 0.3rem;
 }
 
 .card--star {
   height: 18px;
+}
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--price {
+  margin-top: auto;
 }

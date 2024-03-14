@@ -2,22 +2,30 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-
+import data from "./data";
 import "./App.css";
+
+const mapCards = data.map((str) => {
+  return (
+    <Card
+      img={str.coverImg}
+      rating={str.stats.rating}
+      reviewCount={str.reviewCount}
+      location={str.location}
+      title={str.title}
+      price={str.price}
+    />
+  );
+});
 
 export default function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Card
-        img="sax2.jpg"
-        rating="4.8"
-        reviewCount={6}
-        country="UK"
-        title="Sax Lessons with Jorge Pascácio"
-        price={90}
-      />
+    <div className="root-container">
+      <div>
+        <Navbar />
+        <Hero />
+        <section className="cards-list">{mapCards}</section>
+      </div>
     </div>
   );
 }

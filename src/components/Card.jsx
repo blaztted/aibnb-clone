@@ -14,6 +14,7 @@ export default function Card(props) {
         <img src={fav} className="card--star" alt="Fav Icon" />
         <span className="gray">{props.rating}</span>
         <span className="gray">{props.reviewCount}• </span>
+        <span className="gray">{props.location}</span>
         <span>{props.country}</span>
       </div>
       <h2>{props.title}</h2>
