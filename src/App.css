@@ -21,6 +21,11 @@ nav {
   width: 100%;
 }
 
+h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
 .gray {
   color: #918e9b;
 }
@@ -81,7 +86,7 @@ nav {
 
 .card {
   width: 250px;
-  font-size: 12px;
+  font-size: 0.8rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 

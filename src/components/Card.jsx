@@ -2,19 +2,23 @@ import React from "react";
 import sax from "../assets/img/sax2.jpg";
 import fav from "../assets/img/favorite.png";
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className="card">
-      <img src={sax} className="card--image" />
+      <img
+        src={`/assets/img/${props.img}`}
+        className="card--image"
+        alt="Image  of Saxophone Player"
+      />
       <div className="card--stats">
-        <img src={fav} className="card--star" />
-        <span className="gray">5.0</span>
-        <span className="gray">(6) • </span>
-        <span>USA</span>
+        <img src={fav} className="card--star" alt="Fav Icon" />
+        <span className="gray">{props.rating}</span>
+        <span className="gray">{props.reviewCount}• </span>
+        <span>{props.country}</span>
       </div>
-      <p>Sax Lessons with Jorge Pascácio</p>
+      <h2>{props.title}</h2>
       <p>
-        <span className="bold">From £70</span> / hour
+        <span className="bold">From £{props.price}</span> / hour
       </p>
     </div>
   );
